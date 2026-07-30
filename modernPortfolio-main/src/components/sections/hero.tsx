@@ -76,7 +76,7 @@ export function Hero() {
                                     >
                                         <div className="relative w-full h-full">
                                             <Image
-                                                src="/qq.png"
+                                                src="/ww.png"
                                                 alt={portfolioData.name}
                                                 fill
                                                 className="object-cover object-top scale-[1.15] translate-y-[10%]"
