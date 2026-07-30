@@ -1,3 +1,16 @@
+export interface Project {
+    slug: string;
+    category: string;
+    title: string;
+    description: string;
+    tags: string[];
+    tech: string[];
+    gradient: string;
+    image: string;
+    liveUrl?: string;
+    githubUrl?: string;
+}
+
 export const portfolioData = {
     name: "Munavar Hussain",
     initials: "MH",
@@ -75,7 +88,7 @@ export const portfolioData = {
 
     projectCategories: ["AI Agents", "Enterprise AI", "Data Science"],
 
-    projects: [
+    projects: <Project[]>[
         {
             slug: "agentops-platform",
             category: "Enterprise AI",
