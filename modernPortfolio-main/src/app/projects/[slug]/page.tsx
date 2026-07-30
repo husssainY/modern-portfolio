@@ -20,7 +20,7 @@ export default function ProjectDetailPage() {
     const projectIndex = portfolioData.projects.findIndex(
         (p) => p.slug === slug
     );
-    const project = portfolioData.projects[projectIndex];
+    const project = portfolioData.projects[projectIndex] as any;
 
     if (!project) {
         return (
