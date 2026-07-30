@@ -11,6 +11,19 @@ import { cn } from "@/lib/utils";
 
 const projectIcons = [Banknote, GraduationCap, Building2, Factory, Truck, Stethoscope, MessageCircle, Music, ShoppingCart];
 
+interface ProjectType {
+    slug: string;
+    category: string;
+    title: string;
+    description: string;
+    tags: string[];
+    tech: string[];
+    gradient: string;
+    image: string;
+    liveUrl?: string;
+    githubUrl?: string;
+}
+
 export default function ProjectDetailPage() {
     const params = useParams();
     const router = useRouter();
@@ -20,7 +33,7 @@ export default function ProjectDetailPage() {
     const projectIndex = portfolioData.projects.findIndex(
         (p) => p.slug === slug
     );
-    const project = portfolioData.projects[projectIndex] as any;
+    const project = portfolioData.projects[projectIndex] as ProjectType;
 
     if (!project) {
         return (
